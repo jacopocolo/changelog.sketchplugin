@@ -1,0 +1,23 @@
+{
+  "author" : "",
+  "commands" : [
+    {
+      "script" : "script.js",
+      "handler" : "onRun",
+      "shortcut" : "ctrl+alt+c",
+      "name" : "Changelog",
+      "identifier" : "Commit"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "Commit"
+    ],
+    "title" : "Changelog"
+  },
+  "identifier" : "com.jacopocolo.sketch.changelog",
+  "version" : "0.1",
+  "description" : "",
+  "authorEmail" : "",
+  "name" : "Changelog"
+}
