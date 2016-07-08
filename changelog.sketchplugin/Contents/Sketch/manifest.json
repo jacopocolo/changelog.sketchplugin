@@ -5,7 +5,7 @@
       "script" : "script.js",
       "handler" : "onRun",
       "shortcut" : "ctrl+alt+c",
-      "name" : "Changelog",
+      "name" : "Commit changes",
       "identifier" : "Commit"
     }
   ],

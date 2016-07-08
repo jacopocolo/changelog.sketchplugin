@@ -16,7 +16,7 @@ function onRun(context) {
 
 	// Let’s create a window for the ui
 	var window = [[NSWindow alloc] init]
-	var windowTitle = "Update changelog"
+	var windowTitle = "Changelog"
 	[window setTitle:windowTitle]
 	[window setFrame:NSMakeRect(0, 0, 500, 320) display:false]
 
@@ -66,7 +66,7 @@ function onRun(context) {
 
   //On OK button clicked…
 	if (!userClickedCancel) {
-    //… we run a function on the webview and…
+    //… we run functions on the webview
     commit = [webView stringByEvaluatingJavaScriptFromString:@"getCommit()"];
     username = [webView stringByEvaluatingJavaScriptFromString:@"getUsername()"];
 		remember = [webView stringByEvaluatingJavaScriptFromString:@"rememberMe()"];
@@ -75,7 +75,6 @@ function onRun(context) {
 		}
 		changelog();
 	}
-
 	// let the GC gather these guys (and the targets!)
 	okButton = nil;
 	cancelButton = nil;
