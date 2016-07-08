@@ -1,7 +1,8 @@
 # changelog.sketchplugin
 ## What is this?
-A simple Sketch plugin to generate and maintain artboard-based changelogs. You run it, it asks you what changed in your design, your name and it creates (or updates) an artboard with your commits, your name and date and time of the changes.
+A simple Sketch plugin to generate and maintain artboard-based changelogs. 
 
+You run it, it asks you what changed in your design, your name and it creates (or updates) an artboard with your commits, your name and date and time of the changes.
 Every page in your Sketch file can have its own changelog. The changelog title is always synched with the title of the page it is in. There’s no global changelog for the whole file but only page specific ones.
 
 ## A couple of extra things: 
@@ -15,3 +16,4 @@ Every page in your Sketch file can have its own changelog. The changelog title i
 ## TODO:
 - Support for multi-line commits.
 - Support header templates (???)
+- Implement optional event based commit: commit triggered at file save
