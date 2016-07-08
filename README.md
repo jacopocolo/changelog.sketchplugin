@@ -9,8 +9,10 @@ There’s nothing wrong with Git, it’s great! It’s just a bit too much for m
 
 
 ## Extra things: 
-- You can tweak the design of the header as much as tou want. As long as you don’t change the names of the layers, the plugin will update them correctly. You can also make the header bigger and the plugin will abutomatically place commits and details in the right position under it. There’s no template for the header at the moment: every new changelog will go back to the default one.
+- You can tweak the design of the header as much as you want. As long as you don’t change the names of the layers, the plugin will update them correctly. You can also make the header bigger and the plugin will abutomatically place commits and details in the right position under it. There’s no template for the header at the moment: every new changelog will go back to the default one.
+
 ![Header styles](http://i.imgur.com/N98h1wS.png)
+
 - You can stretch the arboard to account for very long changelogs. Or you can simply remove the ones you don’t need anymore. 
 - The changelog title always matches the page title.
 
