@@ -1,20 +1,17 @@
 # changelog.sketchplugin
 ## What is this?
-A simple Sketch plugin to generate and maintain artboard-based changelogs.
+A simple Sketch plugin to generate and maintain artboard-based changelogs. You run it, it asks you what changed in your design, your name and it creates (or updates) an artboard with your commits, your name and date and time of the changes.
 
-Every page in Sketch can have a changelog. If you run the plugin from a page without a changelog, it will create a new one. This is by design.  
+Every page in your Sketch file can have its own changelog. The changelog title is always synched with the title of the page it is in. There’s no global changelog for the whole file but only page specific ones.
 
-## Why not [Sketch Git](https://github.com/mathieudutour/git-sketch-plugin)?
-There’s nothing wrong with Git, it’s great! It’s just a bit too much for my needs. I prefer to keep changelogs and artboards in the same location so you don’t have to go back and forth from browser to Sketch. I added timestamps in the changelog so if you need to go back to a specific version you cross check it with Box, Dropbox or Time machine to go back to the version you need.
-
-
-## Extra things: 
-- You can tweak the design of the header as much as you want. As long as you don’t change the names of the layers, the plugin will update them correctly. You can also make the header bigger and the plugin will abutomatically place commits and details in the right position under it. There’s no template for the header at the moment: every new changelog will go back to the default one.
+## A couple of extra things: 
+- You can tweak the design of the header! As long as you don’t change the names of the layers, the plugin will update them correctly. You can also make the header bigger to add more stuff and the plugin will automatically place commits and details in the right position under it. There’s no template for the header at the moment: every new changelog will go back to the default one.
 
 ![Header styles](http://i.imgur.com/N98h1wS.png)
 
-- You can stretch the arboard to account for very long changelogs. Or you can simply remove the ones you don’t need anymore. 
-- The changelog title always matches the page title.
+- You can stretch the arboard to make room for very long changelogs. Or you can simply remove the ones you don’t need anymore. 
+- All the commits and all the details are in single text layers. It makes the managment of the content much easier. Also, you can change style of those too!
 
 ## TODO:
 - Support for multi-line commits.
+- Support header templates (???)
