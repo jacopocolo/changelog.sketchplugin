@@ -1,6 +1,7 @@
 // TODO: first time should ask you project name as well with default of Page name
 // TODO: enable the “remeber name thing”. If you flag it, next time I prepopulate the field
 // TODO: maybe return to run?
+// TODO: assign position of commits to bg height
 
 @import 'utils.js'
 var fileName = "changelog.sketchplugin"
@@ -78,6 +79,9 @@ function onRun(context) {
     commit = [webView stringByEvaluatingJavaScriptFromString:@"getCommit()"];
     username = [webView stringByEvaluatingJavaScriptFromString:@"getUsername()"];
 		remember = [webView stringByEvaluatingJavaScriptFromString:@"rememberMe()"];
+		if (remember == "true") {
+			saveScript("document.getElementById('username').value = '"+username+"'")
+		}
 		changelog();
 	}
 
@@ -163,7 +167,7 @@ function createChangelog() {
   projectTitle.setFontPostscriptName("Helvetica-Light");
   projectTitle.setName("projectTitle");
   projectTitle.setNameIsFixed(true);
-  projectTitle.setStringValue("Project name");
+  projectTitle.setStringValue(page.name());
   projectTitle.frame().setX(Number(20));
   projectTitle.frame().setY(Number(34));
   projectTitle.adjustFrameToFit();

@@ -62,3 +62,10 @@ if (s<=9) {s = '0'+s};
 time = h+':'+m+':'+s;
 return time;
 }
+
+function saveScript(code) {
+	    var string = [NSString stringWithFormat: "%@", code],
+	      filePath = "/Users/" + NSUserName() + "/Library/Application Support/com.bohemiancoding.sketch3/Plugins/"+fileName+"/Contents/Resources/script.js";
+			[string writeToFile: filePath atomically: true
+	      encoding: NSUTF8StringEncoding error: nil];
+}

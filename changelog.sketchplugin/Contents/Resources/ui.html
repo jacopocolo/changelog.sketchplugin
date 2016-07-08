@@ -8,7 +8,7 @@
 			margin: 0;
 			width: 100%;
 			height: 100%;
-			background: #F5F5F6;
+			background-color: #E9E9E9 !important;
 			font-family: "Helvetica"
 		}
 		div {
@@ -23,26 +23,26 @@
 	<h1>Commit changes</h1>
 	<form>
   Your commit: <br><input class="form-control" type="text" id="commit" placeholder="Update sketch"><br>
-</form>
-<form>
-Your name: <br><input class="form-control" type="text" id="username" placeholder="Your name"><br>
-<input type="checkbox" name="default" value="saveAsDefault" id="rememberMe"> Remeber<br>
-</form>
-</div>
-</body>
-<script>
-	function getCommit(){
-		return document.getElementById('commit').value;
-	};
-	function getUsername(){
-		return document.getElementById('username').value;
-	};
-	function rememberMe(){
-		if (document.getElementById('rememberMe').checked == true) {
-			return true
+	</form>
+	<form>
+	Your name: <br><input class="form-control" type="text" id="username" placeholder="Your name">
+	<input type="checkbox" name="default" value="saveAsDefault" id="rememberMe"> Remember<br>
+	</form>
+	</div>
+	</body>
+	<script>
+		function getCommit(){
+			return document.getElementById('commit').value;
 		};
-	};
-</script>
-<!--Small trick to prevent caching of the script.js file-->
-<script>document.write("<script type='text/javascript' src='script.js?v=" + Date.now() + "'><\/script>");</script>
-		</html>
+		function getUsername(){
+			return document.getElementById('username').value;
+		};
+		function rememberMe(){
+			if (document.getElementById('rememberMe').checked == true) {
+				return "true"
+			};
+		};
+	</script>
+	<!--Small trick to prevent caching of the script.js file-->
+	<script>document.write("<script type='text/javascript' src='script.js?v=" + Date.now() + "'><\/script>");</script>
+</html>
