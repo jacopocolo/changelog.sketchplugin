@@ -54,18 +54,16 @@ function currentTime() {
 var d = new Date()
 var h = d.getHours();
 var m = d.getMinutes();
-var s = d.getSeconds();
 if (h<=9) {h = '0'+h};
 if (m<=9) {m = '0'+m};
-if (s<=9) {s = '0'+s};
 
-time = h+':'+m+':'+s;
+time = h+':'+m;
 return time;
 }
 
 function saveScript(code) {
 	    var string = [NSString stringWithFormat: "%@", code],
-	      filePath = "/Users/" + NSUserName() + "/Library/Application Support/com.bohemiancoding.sketch3/Plugins/"+fileName+"/Contents/Resources/script.js";
+	      filePath = "/Users/" + NSUserName() + "/Library/Application Support/com.bohemiancoding.sketch3/Plugins/changelog.sketchplugin/Contents/Resources/script.js";
 			[string writeToFile: filePath atomically: true
 	      encoding: NSUTF8StringEncoding error: nil];
 }

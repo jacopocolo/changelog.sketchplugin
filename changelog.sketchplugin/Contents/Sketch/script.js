@@ -1,10 +1,4 @@
-// TODO: first time should ask you project name as well with default of Page name
-// TODO: enable the “remeber name thing”. If you flag it, next time I prepopulate the field
-// TODO: maybe return to run?
-// TODO: assign position of commits to bg height
-
 @import 'utils.js'
-var fileName = "changelog.sketchplugin"
 var commit;
 var username;
 var remember;
@@ -24,14 +18,11 @@ function onRun(context) {
 	var window = [[NSWindow alloc] init]
 	var windowTitle = "Update changelog"
 	[window setTitle:windowTitle]
-  //Let’s create a 500x420 pixels window
-	[window setFrame:NSMakeRect(0, 0, 500, 420) display:false]
+	[window setFrame:NSMakeRect(0, 0, 500, 320) display:false]
 
   //Let’s set up the path of the html page we want to load
-  var filePath = "/Users/" + NSUserName() + "/Library/Application Support/com.bohemiancoding.sketch3/Plugins/"+fileName+"/Contents/Resources/ui.html";
-
-  //Let’s set up a frame for the webview, a little smaller than the window so we have room for controls
-  var frame = NSMakeRect(0,60,500,340);
+  var filePath = "/Users/" + NSUserName() + "/Library/Application Support/com.bohemiancoding.sketch3/Plugins/changelog.sketchplugin/Contents/Resources/ui.html";
+  var frame = NSMakeRect(0,60,500,240);
   var url = [NSURL fileURLWithPath:filePath];
   var webView = [[WebView alloc] initWithFrame:frame]
   [[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]]]
@@ -122,6 +113,7 @@ function changelog() {
 	  frame.setHeight(800)
 	  artboard.setName("changelog")
 	  artboard.setHasBackgroundColor(false);
+		artboard.setConstrainProportions(false);
 	  doc.currentPage().addLayers([artboard])
 	  createChangelog();
 		//if the changelog artboard exists we just update it
@@ -239,15 +231,20 @@ function createChangelog() {
 };
 
 function updateChangelog() {
+	var bg = getLayerWithName("bg", "changelog");
+	var bgX = bg.frame().maxY();
+
 	var timestamp = getLayerWithName("Timestamp", "changelog");
 	timestamp.setStringValue(currentDate());
 
 	var details = getLayerWithName("Details", "changelog");
 	var detailsList = username+" commited at "+currentTime()+" on "+currentDate()+"\n\n"+details.stringValue().toString();
+	details.frame().setY(Number(bgX+32));
 	details.setStringValue(detailsList);
 
 	var commits = getLayerWithName("Commits", "changelog");
 	var commitList = commit+"\n\n"+commits.stringValue().toString();
+	commits.frame().setY(Number(bgX+15));
 	commits.setStringValue(commitList);
 
 	var projectTitle = getLayerWithName("projectTitle", "changelog");
