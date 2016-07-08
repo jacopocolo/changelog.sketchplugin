@@ -249,5 +249,9 @@ function updateChangelog() {
 	var commits = getLayerWithName("Commits", "changelog");
 	var commitList = commit+"\n\n"+commits.stringValue().toString();
 	commits.setStringValue(commitList);
+
+	var projectTitle = getLayerWithName("projectTitle", "changelog");
+	projectTitle.setStringValue(page.name());
+	projectTitle.adjustFrameToFit();
 	return
 };
