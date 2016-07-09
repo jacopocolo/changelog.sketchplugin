@@ -11,6 +11,8 @@ Every page in your Sketch file has its own changelog. The changelog title is alw
 
 The shortcut for running the changelog is ctrl+alt+C.
 
+## [Download the latest version here](https://github.com/jacopocolo/changelog.sketchplugin/releases)
+
 ## A couple of extra things: 
 - You can tweak the design of the header! As long as you don’t change the names of the layers, the plugin will update them correctly. You can also make the header bigger to add more stuff and the plugin will automatically place commits and details in the right position under it. There’s no template for the header at the moment: every new changelog will go back to the default one.
 
