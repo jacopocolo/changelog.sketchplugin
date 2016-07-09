@@ -54,6 +54,10 @@
 		};
 		//disable enter on form
 		window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+		//focus onload
+		window.onload = function() {
+  		document.getElementById("commit").focus();
+		};
 	</script>
 	<!--Small trick to prevent caching of the script.js file-->
 	<script>document.write("<script type='text/javascript' src='script.js?v=" + Date.now() + "'><\/script>");</script>
