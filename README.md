@@ -14,6 +14,7 @@ Every page in your Sketch file can have its own changelog. The changelog title i
 - All the commits and all the details are in single text layers. It makes the managment of the content much easier. Also, you can change style of those too!
 
 ## TODO:
+- Hitting should run the plugin
 - Support for multi-line commits.
 - Support header templates (???)
 - Implement optional event based commit: commit triggered at file save
