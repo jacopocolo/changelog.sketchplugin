@@ -1,6 +1,6 @@
 # changelog.sketchplugin
 
-![Changelog.sketchplugin gif](http://i.imgur.com/k8N1ssZ.gifv)
+![Changelog.sketchplugin gif](http://i.imgur.com/k8N1ssZ.gif)
 
 ## What is this?
 A simple Sketch plugin to generate and maintain artboard-based changelogs. 
