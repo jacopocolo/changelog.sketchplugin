@@ -32,7 +32,7 @@ function onRun(context) {
 	// Let’s create a native OK button
 	var okButton = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 0, 0)]
 	var userClickedOK = false
-	[okButton setTitle:"  Commit  "]
+	[okButton setTitle:"  Save  "]
 	[okButton setBezelStyle:NSRoundedBezelStyle]
 	[okButton sizeToFit]
 	[okButton setFrame:NSMakeRect([window frame].size.width - [okButton frame].size.width - 20, 14, [okButton frame].size.width, [okButton frame].size.height)]

@@ -32,10 +32,20 @@
 	</body>
 	<script>
 		function getCommit(){
-			return document.getElementById('commit').value;
+			commit = document.getElementById('commit').value;
+			if (commit != "") {
+					return commit;
+			} else {
+				return "Updated the design"
+			}
 		};
 		function getUsername(){
-			return document.getElementById('username').value;
+			username = document.getElementById('commit').value;
+			if (username != "") {
+					return username;
+			} else {
+				return "A designer";
+			}
 		};
 		function rememberMe(){
 			if (document.getElementById('rememberMe').checked == true) {
