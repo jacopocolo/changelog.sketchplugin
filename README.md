@@ -10,8 +10,8 @@ Every page in your Sketch file can have its own changelog. The changelog title i
 
 ![Header styles](http://i.imgur.com/N98h1wS.png)
 
-- You can stretch the arboard to make room for very long changelogs. Or you can simply remove the ones you don’t need anymore. 
-- All the commits and all the details are in single text layers. It makes the managment of the content much easier. Also, you can change style of those too!
+- You can stretch the arboard to make room for very long changelogs. Or you can simply remove the ones you don’t need anymore.
+- Commits and details are in single, separate, text layers. It makes the managment of the content much easier.
 
 ## TODO:
 - Hitting should run the plugin
