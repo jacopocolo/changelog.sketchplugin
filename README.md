@@ -25,4 +25,5 @@ The shortcut for running the changelog is ctrl+alt+C.
 - Hitting should run the plugin
 - Support for multi-line commits.
 - Support header templates (???)
+- Zoom to the changelog when commited (???)
 - Implement optional event based commit: commit triggered at file save
