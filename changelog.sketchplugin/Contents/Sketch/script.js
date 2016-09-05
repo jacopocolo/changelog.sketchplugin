@@ -110,7 +110,7 @@ function changelog() {
 	  }
 	  frame.setWidth(600)
 	  frame.setHeight(800)
-	  artboard.setName("changelog")
+	  artboard.setName("changelog for "+page.name())
 	  artboard.setHasBackgroundColor(false);
 		artboard.setConstrainProportions(false);
 	  doc.currentPage().addLayers([artboard])
@@ -143,7 +143,7 @@ function createChangelog() {
   changelogTitle.textColor = MSColor.colorWithSVGString("#AEAEAF");
   changelogTitle.fontSize = 12;
   changelogTitle.setFontPostscriptName("HelveticaRegular");
-  changelogTitle.setName("changelog");
+  changelogTitle.setName("Changelog");
   changelogTitle.setNameIsFixed(true);
   changelogTitle.setStringValue("Changelog");
   changelogTitle.frame().setX(Number(20));
@@ -154,13 +154,13 @@ function createChangelog() {
 
   var projectTitle = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100));
   projectTitle.textColor = MSColor.colorWithSVGString("#858688");
-  projectTitle.fontSize = 30;
+  projectTitle.fontSize = 26;
   projectTitle.setFontPostscriptName("Helvetica-Light");
   projectTitle.setName("projectTitle");
   projectTitle.setNameIsFixed(true);
   projectTitle.setStringValue(page.name());
   projectTitle.frame().setX(Number(20));
-  projectTitle.frame().setY(Number(34));
+  projectTitle.frame().setY(Number(38));
   projectTitle.adjustFrameToFit();
 	projectTitle.setIsLocked(true);
   artboard.addLayers_([projectTitle]);
@@ -180,13 +180,13 @@ function createChangelog() {
 
   var timestamp = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100));
   timestamp.textColor = MSColor.colorWithSVGString("#858688");
-  timestamp.fontSize = 30;
+  timestamp.fontSize = 26;
   timestamp.setFontPostscriptName("Helvetica-Light");
   timestamp.setName("Timestamp");
   timestamp.setNameIsFixed(true);
   timestamp.setStringValue(currentDate());
-  timestamp.frame().setX(Number(429));
-  timestamp.frame().setY(Number(33));
+  timestamp.frame().setX(Number(449));
+  timestamp.frame().setY(Number(38));
   timestamp.adjustFrameToFit();
 	timestamp.setIsLocked(true);
   artboard.addLayers_([timestamp]);
@@ -230,6 +230,7 @@ function createChangelog() {
 };
 
 function updateChangelog() {
+	artboard.setName("changelog for "+page.name())
 	var bg = getLayerWithName("bg", "changelog");
 	var bgX = bg.frame().maxY();
 
