@@ -14,8 +14,9 @@ function getArtboardWithName(name) {
 	var artboards = jsArray([doc artboards]);
 	for(var i = 0; i < artboards.length; i++) {
 	  	var artboard = artboards[i];
-	  	//if page matches name
-	  	if([artboard name] == name) {
+	  	//we check for the “changelog” substring so we can attach the page name in the changelog artboard name
+      artboardName = [artboard name].substring(0,9);
+	  	if(artboardName == name) {
 	  		return artboard;
 	  	}
 	}
