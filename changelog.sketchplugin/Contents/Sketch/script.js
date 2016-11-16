@@ -134,13 +134,13 @@ function createChangelog() {
   path.closePath();
   var shape = MSShapeGroup.shapeWithBezierPath(path);
   var fill = shape.style().addStylePartOfType(0);
-  fill.color = MSColor.colorWithSVGString("#F5F5F6");
+  fill.color = MSImmutableColor.colorWithSVGString("#F5F5F6");
   shape.setName("bg");
 	shape.setIsLocked(true);
   artboard.addLayers([shape]);
 
   var changelogTitle = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100))
-  changelogTitle.textColor = MSColor.colorWithSVGString("#AEAEAF");
+  changelogTitle.textColor = MSImmutableColor.colorWithSVGString("#AEAEAF");
   changelogTitle.fontSize = 12;
   changelogTitle.setFontPostscriptName("HelveticaRegular");
   changelogTitle.setName("Changelog");
@@ -153,7 +153,7 @@ function createChangelog() {
   artboard.addLayers_([changelogTitle]);
 
   var projectTitle = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100));
-  projectTitle.textColor = MSColor.colorWithSVGString("#858688");
+  projectTitle.textColor = MSImmutableColor.colorWithSVGString("#858688");
   projectTitle.fontSize = 26;
   projectTitle.setFontPostscriptName("Helvetica-Light");
   projectTitle.setName("projectTitle");
@@ -162,11 +162,11 @@ function createChangelog() {
   projectTitle.frame().setX(Number(20));
   projectTitle.frame().setY(Number(38));
   projectTitle.adjustFrameToFit();
-	projectTitle.setIsLocked(true);
+  projectTitle.setIsLocked(true);
   artboard.addLayers_([projectTitle]);
 
   var lastUpdate = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100));
-  lastUpdate.textColor = MSColor.colorWithSVGString("#AEAEAF");
+  lastUpdate.textColor = MSImmutableColor.colorWithSVGString("#AEAEAF");
   lastUpdate.fontSize = 12;
   lastUpdate.setFontPostscriptName("HelveticaRegular");
   lastUpdate.setName("lastupdate");
@@ -179,7 +179,7 @@ function createChangelog() {
   artboard.addLayers_([lastUpdate]);
 
   var timestamp = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100));
-  timestamp.textColor = MSColor.colorWithSVGString("#858688");
+  timestamp.textColor = MSImmutableColor.colorWithSVGString("#858688");
   timestamp.fontSize = 26;
   timestamp.setFontPostscriptName("Helvetica-Light");
   timestamp.setName("Timestamp");
@@ -194,7 +194,7 @@ function createChangelog() {
   //one single element for all the commits, it’s easier to maintain and update
   var commitList = commit+"\n\n";
   var commits = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100));
-  commits.textColor = MSColor.colorWithSVGString("#4F5051");
+  commits.textColor = MSImmutableColor.colorWithSVGString("#4F5051");
   commits.fontSize = 14;
   commits.lineHeight = 22;
   commits.setFontPostscriptName("Helvetica-Regular");
@@ -212,7 +212,7 @@ function createChangelog() {
   //one single element for all the details, it’s easier to maintain and update
   var detailsList = username+" commited at "+currentTime()+" on "+currentDate()+"\n\n";
   var details = MSTextLayer.alloc().initWithFrame_(NSMakeRect(0, 0, 100, 100));
-  details.textColor = MSColor.colorWithSVGString("#AEAEAF");
+  details.textColor = MSImmutableColor.colorWithSVGString("#AEAEAF");
   details.fontSize = 12;
   details.lineHeight = 22;
   details.setFontPostscriptName("Helvetica-Regular");
