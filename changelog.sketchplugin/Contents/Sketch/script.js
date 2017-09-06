@@ -21,7 +21,7 @@ function onRun(context) {
 	[window setFrame:NSMakeRect(0, 0, 500, 320) display:false]
 
   //Let’s set up the path of the html page we want to load
-  var filePath = "/Users/" + NSUserName() + "/Library/Application Support/com.bohemiancoding.sketch3/Plugins/changelog.sketchplugin/Contents/Resources/ui.html";
+  var filePath = context.plugin.urlForResourceNamed("ui.html").path();
   var frame = NSMakeRect(0,60,500,240);
   var url = [NSURL fileURLWithPath:filePath];
   var webView = [[WebView alloc] initWithFrame:frame]
